@@ -16,7 +16,6 @@ function App() {
 
   const [keywords, setKeywords] = useState("");
   const [currentKeywords, setCurrentKeywords] = useState("");
-  const [loading, setLoading] = useState(false);
   const [voiceActors, setVoiceActors] = useState([]);
   const [pagination, setPagination] = useState({
     currentPage: 1,
@@ -26,7 +25,6 @@ function App() {
   const handleChangeKeywords = (e) => setKeywords(e.target.value);
 
   const handleVoiceActorsSearch = async (page = 1) => {
-    setLoading(true);
     try {
       const { data, pagination } = await getVoiceActors(keywords, page);
       setVoiceActors(data);
@@ -35,8 +33,6 @@ function App() {
     } catch (error) {
       console.error(error);
       alert("Ops, something went wrong");
-    } finally {
-      setLoading(false);
     }
   };
 

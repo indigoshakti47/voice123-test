@@ -39,7 +39,7 @@ export default function Pagination({ currentPage, totalPages, onClickPage }) {
         <PaginationItem
           key={page}
           onClick={() => handlePageChange(page)}
-          active={page == currentPage}
+          active={page === currentPage}
         >
           {page}
         </PaginationItem>
