@@ -11,7 +11,7 @@ export default function Card({ voiceActor, keywords }) {
 		<div className="my-1 px-1 w-full md:w-1/3">
 			<article className="overflow-hidden rounded-lg shadow-lg p-5 bg-white">
 				<header className="flex items-center justify-between leading-tight p-2 md:p-4">
-					<img alt="avatar" class="w-16 rounded-full border-2 border-gray-300" src={voiceActor.user.picture_small || defaultAvatar} />
+					<img alt="avatar" className="w-16 rounded-full border-2 border-gray-300" src={voiceActor.user.picture_small || defaultAvatar} />
 					<h1 className="text-lg text-red-600">
 						<a className="no-underline hover:underline text-black" target="__blank" href={`https://voice123.com/${voiceActor.user.username}`}>
 							{voiceActor.user.name}
